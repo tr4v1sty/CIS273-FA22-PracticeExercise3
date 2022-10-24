@@ -11,6 +11,7 @@ namespace PracticeExercise3
             
         }
 
+        
         public T First => IsEmpty ? throw new EmptyQueueException() : linkedList.First.Value;
 
         public T Last => IsEmpty ? throw new EmptyQueueException() : linkedList.Last.Value;

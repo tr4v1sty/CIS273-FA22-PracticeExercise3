@@ -7,6 +7,14 @@ namespace PracticeExercise3
 		{
 
 		}
-	}
+        public EmptyQueueException(string message)
+        : base(message)
+        { }
+
+        public EmptyQueueException(string message, Exception innerException)
+            : base(message, innerException)
+        { }
+
+    }
 }
 
