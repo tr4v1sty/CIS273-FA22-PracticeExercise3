@@ -5,6 +5,7 @@ namespace PracticeExercise3
 	{
 		public EmptyQueueException()
 		{
+
 		}
 	}
 }

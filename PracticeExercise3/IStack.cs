@@ -7,17 +7,16 @@ using System.Threading.Tasks;
 namespace PracticeExercise3
 {
     
-	public interface IStack<T>
-	{
-		void Push(T item);
+        public interface IStack<T>
+        {
+            void Push(T item);
 
-		T Pop();
+            T Pop();
 
-		T Peek();
+            T Peek();
 
-		bool IsEmpty { get; }
+            bool IsEmpty { get; }
 
-		int Length { get; }
-	}
+            int Length { get; }
+        }
 }
-

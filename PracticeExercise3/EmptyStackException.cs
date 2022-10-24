@@ -1,10 +1,10 @@
 ﻿using System;
 namespace PracticeExercise3
 {
-	{
-		public EmptyStackException()
-		{
-		}
-	}
+    public class EmptyStackException : Exception
+    {
+        public EmptyStackException()
+        {
+        }
+    }
 }
-

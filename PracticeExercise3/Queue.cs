@@ -1,14 +1,14 @@
 ﻿using System;
 namespace PracticeExercise3
 {
-	public class Queue<T> : IQueue<T>
-	{
+    public class Queue<T> : IQueue<T>
+    {
         private LinkedList<T> linkedList;
 
-		public Queue()
-		{
+        public Queue()
+        {
             linkedList = new LinkedList<T>();
-		}
+        }
 
         public T First => IsEmpty ? throw new EmptyQueueException() : linkedList.First.Value;
 
@@ -18,12 +18,9 @@ namespace PracticeExercise3
 
         public bool IsEmpty => Length == 0;
 
-        T IQueue<T>.Length => throw new NotImplementedException();
-
-        T IQueue<T>.IsEmpty => throw new NotImplementedException();
-
         public T Dequeue()
         {
+            if (IsEmpty)
             {
                 throw new EmptyQueueException();
             }
@@ -60,4 +57,3 @@ namespace PracticeExercise3
         }
     }
 }
-
