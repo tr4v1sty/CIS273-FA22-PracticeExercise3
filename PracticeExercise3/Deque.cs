@@ -9,34 +9,37 @@ namespace PracticeExercise3
 
         public Deque()
         {
+            linkedList = new LinkedList<T>();
         }
 
-        public bool IsEmpty => throw new NotImplementedException();
+        public bool IsEmpty => throw new EmptyQueueException();
 
-        public int Length => throw new NotImplementedException();
+        public int Length => linkedList.Count;
 
-        public T Front => throw new NotImplementedException();
+        public T Front => linkedList.First();
 
-        public T Back => throw new NotImplementedException();
+        public T Back => linkedList.Last(); 
 
         public void AddBack(T item)
         {
-            throw new NotImplementedException();
+            linkedList.AddLast(item);
         }
 
         public void AddFront(T item)
         {
-            throw new NotImplementedException();
+            linkedList.AddFirst(item);
         }
 
         public T RemoveBack()
         {
-            throw new NotImplementedException();
+            linkedList.RemoveLast();
+            return linkedList.Last();
         }
 
         public T RemoveFront()
         {
-            throw new NotImplementedException();
+            linkedList.RemoveFirst();
+            return linkedList.First();
         }
 
         public override string ToString()

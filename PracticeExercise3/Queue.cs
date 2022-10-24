@@ -8,6 +8,7 @@ namespace PracticeExercise3
         public Queue()
         {
             linkedList = new LinkedList<T>();
+            
         }
 
         public T First => IsEmpty ? throw new EmptyQueueException() : linkedList.First.Value;
@@ -34,6 +35,7 @@ namespace PracticeExercise3
         public void Enqueue(T item)
         {
             linkedList.AddLast(item);
+            
         }
 
         public override string ToString()
