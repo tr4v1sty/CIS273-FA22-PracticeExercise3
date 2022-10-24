@@ -8,20 +8,13 @@ using System.Threading.Tasks;
 
 namespace PracticeExercise3
 {
-    public interface IQueue<T>
-    {
-         void Enqueue(T item);
+	public interface IQueue<T>
+	{
+		T Dequeue();
 
-         T Dequeue();
+		T First {get;}
+		T Last {get;}
 
-        T First {get;}
-        T Last {get;}
-
-        T Length { get; }
-        T IsEmpty{ get; } 
-
-
-
-
-    }
+	}
 }
+

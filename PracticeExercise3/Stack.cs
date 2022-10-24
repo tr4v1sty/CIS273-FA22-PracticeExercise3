@@ -1,14 +1,14 @@
 ﻿using System;
 namespace PracticeExercise3
 {
-    public class Stack<T> : IStack<T>
-    {
+	public class Stack<T> : IStack<T>
+	{
         private LinkedList<T> linkedList;
 
-        public Stack()
-        {
+		public Stack()
+		{
             linkedList = new LinkedList<T>();
-        }
+		}
 
         public bool IsEmpty => linkedList.Count == 0;
 
@@ -26,7 +26,6 @@ namespace PracticeExercise3
 
         public T Pop()
         {
-            if (IsEmpty)
             {
                 throw new EmptyStackException();
             }
@@ -58,3 +57,4 @@ namespace PracticeExercise3
         }
     }
 }
+

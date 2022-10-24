@@ -3,13 +3,13 @@ using System.Collections.Generic;
 
 namespace PracticeExercise3
 {
-    public class Deque<T> : IDeque<T>
-    {
+	public class Deque<T> : IDeque<T>
+	{
         private LinkedList<T> linkedList;
 
-        public Deque()
-        {
-        }
+		public Deque()
+		{
+		}
 
         public bool IsEmpty => throw new NotImplementedException();
 
@@ -60,3 +60,4 @@ namespace PracticeExercise3
         }
     }
 }
+
