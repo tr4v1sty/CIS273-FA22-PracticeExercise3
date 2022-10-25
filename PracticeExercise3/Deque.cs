@@ -11,14 +11,15 @@ namespace PracticeExercise3
         public Deque()
         {
             linkedList = new LinkedList<T>();
-            length = 0;
-            length = linkedList.Count;
+            
         }
 
-        public bool IsEmpty => Length == 0;
+        public bool IsEmpty => linkedList.Count ==  0;
 
         public int Length => linkedList.Count;
-        private int length = 0;
+       
+        
+
         
         
 
@@ -29,28 +30,30 @@ namespace PracticeExercise3
         public void AddBack(T item)
         {
             linkedList.AddLast(item);
-            length++;
+            
             
         }
 
         public void AddFront(T item)
         {
             linkedList.AddFirst(item);
-            length++;
+            
         }
 
         public T RemoveBack()
         {
+            //savee what the orig last one was
             linkedList.RemoveLast();
             return linkedList.Last();
-            length--;
+            
         }
 
         public T RemoveFront()
         {
+            //save what the orig first one was
             linkedList.RemoveFirst();
             return linkedList.First();
-            length--;
+            
         }
 
         public override string ToString()
