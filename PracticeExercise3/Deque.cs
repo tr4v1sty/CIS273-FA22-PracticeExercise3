@@ -43,16 +43,22 @@ namespace PracticeExercise3
         public T RemoveBack()
         {
             //savee what the orig last one was
+            var back = linkedList.Last.Value;
             linkedList.RemoveLast();
-            return linkedList.Last();
+            return back;
             
         }
 
         public T RemoveFront()
         {
-            //save what the orig first one was
+            //save what the orig first one throw error if empty
+            if (IsEmpty)
+            {
+                throw new EmptyQueueException();
+            }
+            var front = linkedList.First.Value;
             linkedList.RemoveFirst();
-            return linkedList.First();
+            return front;
             
         }
 
